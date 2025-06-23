@@ -4,9 +4,13 @@
 // es syntax
 
 import express from 'express';
-import products from './data/products.js'
+import dotenv from 'dotenv';
+dotenv.config();
+import products from './data/products.js';
 
-const port = 5000;
+// const port = 5000;  => without using .env
+// using .env
+const port = process.env.PORT || 5000;
 
 const app = express();
 
