@@ -17,16 +17,20 @@ const Header = () => {
 
     const [logoutApiCall] = useLogoutMutation();
 
-    const logoutHandler = async() => {
+    const logoutHandler = async () => {
         try {
             await logoutApiCall().unwrap();
             dispatch(logout());
             navigate('/login');
-            
+
         } catch (err) {
             console.log(err);
         }
     };
+
+    const onProfileButtonClick = () => {
+        navigate('/profile');
+    }
 
     return (
         <header>
@@ -54,9 +58,9 @@ const Header = () => {
                             </Nav.Link>
                             {userInfo ?
                                 (<NavDropdown title={userInfo.name} id="username">
-                                    <Nav.Link as={Link} to='/profile'>
-                                        <NavDropdown.Item>Profile</NavDropdown.Item>
-                                    </Nav.Link>
+                                    <NavDropdown.Item onClick={onProfileButtonClick}>
+                                        Profile
+                                    </NavDropdown.Item>
                                     <NavDropdown.Item onClick={logoutHandler}>
                                         Logout
                                     </NavDropdown.Item>
