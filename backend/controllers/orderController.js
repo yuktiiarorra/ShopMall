@@ -91,6 +91,50 @@ const updateOrderToPaid = asyncHandler(async (req, res) => {
     }
 });
 
+// @desc    Update order to Cash On Delivery(COD)
+// @route   PUT /api/orders/:id/pay
+// @access  Private
+// const updateOrderToCashOnDelivery = asyncHandler(async (req, res) => {
+//     const order = await Order.findById(req.params.id);
+
+//     if (order) {
+//         order.isPaid = false;
+//         order.paidAt = "Cash On Delivery";
+//         order.paymentResult = {
+//             id: req.body.id,
+//             status: req.body.status,
+//             email_address: req.body.payer.email_address
+//         };
+
+//         const updatedOrder = await order.save();
+
+//         res.status(200).json(updatedOrder);
+//     }
+//     else {
+//         res.status(404);
+//         throw new Error("Order not found");
+//     }
+// });
+
+// @desc    Update order to delivered
+// @route   GET /api/orders/:id/deliver
+// @access  Private/Admin
+// const receivedPaymentInCash = asyncHandler(async (req, res) => {
+//     const order = await Order.findById(req.params.id);
+
+//     if (order) {
+//         order.isPaid = true;
+
+//         const updatedOrder = await order.save();
+
+//         res.status(200).json(updatedOrder);
+//     }
+//     else {
+//         res.status(404);
+//         throw new Error('Order not found');
+//     }
+// });
+
 // @desc    Update order to delivered
 // @route   GET /api/orders/:id/deliver
 // @access  Private/Admin
@@ -124,6 +168,8 @@ export {
     getMyOrders,
     getOrderById,
     updateOrderToPaid,
+    // updateOrderToCashOnDelivery,
+    // receivedPaymentInCash,
     updateOrderToDelivered,
     getOrders
 };

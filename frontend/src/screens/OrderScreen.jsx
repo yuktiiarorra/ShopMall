@@ -6,7 +6,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { PayPalButtons, usePayPalScriptReducer } from '@paypal/react-paypal-js'
 import Message from "../components/Message";
 import Loader from "../components/Loader";
-import { useGetOrderDetailsQuery, usePayOrderMutation, useGetPayPalClientIdQuery, useDeliverOrderMutation } from "../slices/ordersApiSlice";
+import {
+    useGetOrderDetailsQuery, usePayOrderMutation,
+    // usePayOrderInCashMutation,
+    // useReceivedPaymentInCashMutation,
+    useGetPayPalClientIdQuery, useDeliverOrderMutation
+} from "../slices/ordersApiSlice";
 
 const OrderScreen = () => {
     const { id: orderId } = useParams();
@@ -15,7 +20,11 @@ const OrderScreen = () => {
 
     const [payOrder, { isLoading: loadingPay }] = usePayOrderMutation();
 
-    const [deliverOrder, { isLoading: loadingDeliver}] = useDeliverOrderMutation();
+    // const [payOrderInCash, { isLoading: loadingPayCash }] = usePayOrderInCashMutation();
+
+    // const [receivedPaymentInCash, { isLoading: loadingPaymentReceivedInCash }] = useReceivedPaymentInCashMutation();
+
+    const [deliverOrder, { isLoading: loadingDeliver }] = useDeliverOrderMutation();
 
     const [{ isPending }, paypalDispatch] = usePayPalScriptReducer();
 
@@ -55,12 +64,11 @@ const OrderScreen = () => {
         });
     }
 
-    // TESTING ONLY! REMOVE BEFORE PRODUCTION
-    async function onApproveTest() {
-        await payOrder({ orderId, details: { payer: {} } });
-        refetch();
-        toast.success('Order is paid');
-    }
+    // async function onApproveCash() {
+    //     await payOrderInCash({ orderId, details: { payer: {} } });
+    //     refetch();
+    //     toast.success('Order is Cash On Delivery(COD)');
+    // }
 
     function onError(err) {
         toast.error(err.message);
@@ -79,6 +87,16 @@ const OrderScreen = () => {
                 return orderID;
             });
     }
+
+    // const cashHandler = async () => {
+    //     try {
+    //         await receivedPaymentInCash(orderId);
+    //         refetch();
+    //         toast.success("Payment Received as Cash On Delivery");
+    //     } catch (err) {
+    //         toast.error(err?.data?.message || err.message);
+    //     }
+    // }
 
     const deliverHandler = async () => {
         try {
@@ -193,27 +211,38 @@ const OrderScreen = () => {
                                     {loadingPay && <Loader />}
 
                                     {isPending ? <Loader /> : (
-                                        <div> 
-                                            <Button onClick={onApproveTest} style={{ marginBottom: '10px' }}>Test Pay Order</Button>
+                                        <div>
+                                            {/* <div>
+                                                <Button onClick={onApproveCash} style={{ marginBottom: '10px' }}>Cash On Delivery (COD)</Button>
+                                            </div> */}
                                             <div>
                                                 <PayPalButtons createOrder={createOrder}
                                                     onApprove={onApprove}
                                                     onError={onError}></PayPalButtons>
                                             </div>
+
                                         </div>
+
                                     )}
                                 </ListGroup.Item>
                             )}
-                         
-                                    {loadingDeliver && <Loader />}
-                                    
-                                    {userInfo && userInfo.isAdmin && order.isPaid && !order.isDelivered && (
-                                        <ListGroup.Item>
-                                            <Button type="button" className="btn btn-block" onClick={deliverHandler}>
-                                                Mark As Delivered
-                                            </Button>
-                                        </ListGroup.Item>
-                                    )}
+
+                            {loadingDeliver && <Loader />}
+
+                            {/* {userInfo && userInfo.isAdmin && !order.isPaid && (
+                                <ListGroup.Item>
+                                    <Button type="button" className="btn btn-block" onClick={cashHandler}>
+                                        Payment Received (Cash On Delivery)
+                                    </Button>
+                                </ListGroup.Item>
+                            )} */}
+                            {userInfo && userInfo.isAdmin && order.isPaid && !order.isDelivered && (
+                                <ListGroup.Item>
+                                    <Button type="button" className="btn btn-block" onClick={deliverHandler}>
+                                        Mark As Delivered
+                                    </Button>
+                                </ListGroup.Item>
+                            )}
                         </ListGroup>
                     </Card>
                 </Col>
