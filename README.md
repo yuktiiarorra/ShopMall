@@ -55,9 +55,9 @@ A **full-featured eCommerce platform** built with the **MERN stack** offering se
 git clone https://github.com/your-username/shopmall.git
 cd shopmall
 
-2️⃣ **Install dependencies**
+2️⃣ Install dependencies
 
-bash
+```bash
 Copy
 Edit
 # Install backend dependencies
@@ -70,7 +70,7 @@ npm install
 3️⃣ Set Environment Variables
 Create a .env file in the root directory:
 
-env
+```env
 Copy
 Edit
 NODE_ENV=development
@@ -81,7 +81,7 @@ PAYPAL_CLIENT_ID=your_paypal_client_id
 
 4️⃣ Run the Application
 
-bash
+```bash
 Copy
 Edit
 # Backend only
