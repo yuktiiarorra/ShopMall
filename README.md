@@ -16,8 +16,8 @@ A **full-featured eCommerce platform** built with the **MERN stack** offering se
 <img width="1674" height="913" alt="Screenshot 2025-08-09 045234" src="https://github.com/user-attachments/assets/23acd9a8-5c4e-407f-9bac-c34e0901c349" />
 <img width="1403" height="926" alt="Screenshot 2025-08-09 045258" src="https://github.com/user-attachments/assets/e82330da-dcc3-43e3-8bec-f5b20e542545" />
 <img width="1671" height="442" alt="Screenshot 2025-08-09 045325" src="https://github.com/user-attachments/assets/9402cd16-d70d-453e-aace-b286dba598dd" />
-<img width="1406" height="486" alt="Screenshot 2025-08-09 045359" src="https://github.com/user-attachments/assets/384dfc93-09d0-4d8d-8807-5a47bcc60354" />
 <img width="1392" height="841" alt="Screenshot 2025-08-09 045503" src="https://github.com/user-attachments/assets/f62c9bc7-8641-4590-81a2-dfdfc95511d7" />
+<img width="1406" height="486" alt="Screenshot 2025-08-09 045359" src="https://github.com/user-attachments/assets/384dfc93-09d0-4d8d-8807-5a47bcc60354" />
 <img width="1697" height="873" alt="Screenshot 2025-08-09 045522" src="https://github.com/user-attachments/assets/35824dc8-2909-4f25-9a44-b8ba910926ac" />
 
 
