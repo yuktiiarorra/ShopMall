@@ -5,6 +5,22 @@
 
 > ***Your one-stop online shopping experience!***  
 A **full-featured eCommerce platform** built with the **MERN stack** offering secure shopping, smooth checkout, and a responsive interface.
+<img width="1887" height="900" alt="Screenshot 2025-08-09 044807" src="https://github.com/user-attachments/assets/41370a67-4a39-4e75-869b-99bc146c52b0" />
+<img width="1881" height="752" alt="Screenshot 2025-08-09 044838" src="https://github.com/user-attachments/assets/796cae27-33b1-44f1-8784-6599988b59ba" />
+<img width="1885" height="878" alt="Screenshot 2025-08-09 044856" src="https://github.com/user-attachments/assets/aab59808-cd13-4862-8ae9-9d9daec6b844" />
+<img width="1859" height="759" alt="Screenshot 2025-08-09 044937" src="https://github.com/user-attachments/assets/5105a123-faf7-4249-b261-ccb74a8b6365" />
+<img width="791" height="738" alt="Screenshot 2025-08-09 044948" src="https://github.com/user-attachments/assets/fce4f52b-7a43-4cb2-afb8-015c1cf9e972" />
+<img width="1856" height="633" alt="Screenshot 2025-08-09 045017" src="https://github.com/user-attachments/assets/e3ca07c7-934d-4f35-bb61-9aa84c9a8c0d" />
+<img width="1815" height="869" alt="Screenshot 2025-08-09 045046" src="https://github.com/user-attachments/assets/db281aaa-cf0c-4ea7-98d3-92a4219fe497" />
+<img width="1858" height="866" alt="Screenshot 2025-08-09 045108" src="https://github.com/user-attachments/assets/4f776d54-0dcb-4fd2-a698-93bac6cfa208" />
+<img width="1647" height="453" alt="Screenshot 2025-08-09 045158" src="https://github.com/user-attachments/assets/6c1bc7f5-913f-4cd4-94c0-3296f456537b" />
+<img width="1674" height="913" alt="Screenshot 2025-08-09 045234" src="https://github.com/user-attachments/assets/23acd9a8-5c4e-407f-9bac-c34e0901c349" />
+<img width="1403" height="926" alt="Screenshot 2025-08-09 045258" src="https://github.com/user-attachments/assets/e82330da-dcc3-43e3-8bec-f5b20e542545" />
+<img width="1671" height="442" alt="Screenshot 2025-08-09 045325" src="https://github.com/user-attachments/assets/9402cd16-d70d-453e-aace-b286dba598dd" />
+<img width="1406" height="486" alt="Screenshot 2025-08-09 045359" src="https://github.com/user-attachments/assets/384dfc93-09d0-4d8d-8807-5a47bcc60354" />
+<img width="1392" height="841" alt="Screenshot 2025-08-09 045503" src="https://github.com/user-attachments/assets/f62c9bc7-8641-4590-81a2-dfdfc95511d7" />
+<img width="1697" height="873" alt="Screenshot 2025-08-09 045522" src="https://github.com/user-attachments/assets/35824dc8-2909-4f25-9a44-b8ba910926ac" />
+
 
 ---
 
@@ -40,7 +56,7 @@ A **full-featured eCommerce platform** built with the **MERN stack** offering se
 git clone https://github.com/your-username/shopmall.git
 cd shopmall
 
-2️⃣ Install dependencies
+2️⃣ **Install dependencies**
 
 bash
 Copy
