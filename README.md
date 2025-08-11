@@ -40,7 +40,6 @@ A **full-featured eCommerce platform** built with the **MERN stack** offering se
 git clone https://github.com/your-username/shopmall.git
 cd shopmall
 
-<pre>
 2️⃣ Install dependencies
 
 bash
@@ -52,12 +51,10 @@ npm install
 # Install frontend dependencies
 cd frontend
 npm install
-</pre>
 
 3️⃣ Set Environment Variables
 Create a .env file in the root directory:
 
-<pre>
 env
 Copy
 Edit
@@ -66,10 +63,9 @@ PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 PAYPAL_CLIENT_ID=your_paypal_client_id
-</pre>
+
 4️⃣ Run the Application
 
-<pre>
 bash
 Copy
 Edit
@@ -81,19 +77,6 @@ npm run client
 
 # Both frontend & backend
 npm run dev
-</pre>
-
-🤝 Contributing
-Contributions are welcome!
-To contribute:
-
-Fork the repository
-
-Create a new branch (feature/YourFeature)
-
-Commit changes
-
-Push the branch and submit a Pull Request
 
 ## 🙏 Acknowledgements
 This project was inspired by and learned from [Brad Traversy](https://github.com/bradtraversy) through his **MERN eCommerce** course.
