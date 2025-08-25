@@ -43,7 +43,7 @@ A **full-featured eCommerce platform** built with the **MERN stack** offering se
 | **Frontend** | React, Redux, Bootstrap |
 | **Backend**  | Node.js, Express.js |
 | **Database** | MongoDB |
-| **Payments** | PayPal API / Stripe |
+| **Payments** | PayPal API|
 | **Auth**     | JSON Web Tokens (JWT) |
 
 ---
